@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/nukeclears/Portfolio.git",
+  "author": "Thomas <thomasvdeursen@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "^10.2.6",
+    "css-loader": "^5.2.6",
+    "live-server": "^1.2.1",
+    "lodash": "^4.17.21",
+    "postcss": "^8.3.5",
+    "postcss-import": "^14.0.2",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "style-loader": "^3.0.0",
+    "tailwindcss": "^2.2.4",
+    "webpack": "^5.44.0",
+    "webpack-cli": "^4.7.2"
+  },
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0"
+  }
+}

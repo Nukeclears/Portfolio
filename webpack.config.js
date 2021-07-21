@@ -20,10 +20,15 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/i,
-        include: path.resolve(__dirname, 'src'),
-        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader", "css-loader", "sass-loader", "postcss-loader"],
       },
+      // {
+      //   test: /\.css$/i,
+      //   include: path.resolve(__dirname, 'src'),
+      //   use: ['style-loader', 'css-loader', 'postcss-loader'],
+      // },
     ],
   },
   devServer: {
@@ -34,7 +39,7 @@ module.exports = {
     new StyleLintPlugin({
       configFile: '.stylelintrc',
       context: 'src',
-      files: '**/*.css',
+      files: '**/*.scss',
       failOnError: false,
       quiet: false,
       emitErrors: true // by default this is to true to check the CSS lint errors

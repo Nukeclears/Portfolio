@@ -1,0 +1,6 @@
+{
+    "css.validate": false,
+    "stylelint.enable": true,
+    "scss.validate": false,
+    "less.validate": false,
+}

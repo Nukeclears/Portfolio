@@ -20,15 +20,15 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/i,
+        test: /\.less$/i,
         use: [
-          "style-loader", "css-loader", "postcss-loader",],
+          // compiles Less to CSS
+          "style-loader",
+          "css-loader",
+          "less-loader",
+          "postcss-loader",
+        ],
       },
-      // {
-      //   test: /\.css$/i,
-      //   include: path.resolve(__dirname, 'src'),
-      //   use: ['style-loader', 'css-loader', 'postcss-loader'],
-      // },
     ],
   },
   devServer: {

@@ -1,4 +1,5 @@
 const path = require('path');
+var StyleLintPlugin = require('stylelint-webpack-plugin');
 module.exports = {
   mode: 'production',
   entry: './src/index.js',
@@ -29,4 +30,14 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'dist'),
     watchContentBase: true,
   },
+  plugins: [
+    new StyleLintPlugin({
+      configFile: '.stylelintrc',
+      context: 'src',
+      files: '**/*.css',
+      failOnError: false,
+      quiet: false,
+      emitErrors: true // by default this is to true to check the CSS lint errors
+    }),
+  ],
 };

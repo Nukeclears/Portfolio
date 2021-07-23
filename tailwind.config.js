@@ -4,7 +4,11 @@ module.exports = {
     purge: ['./docs/*.html'],
     darkMode: false, // or 'media' or 'class'
     theme: {
-        extend: {},
+        extend: {
+            backgroundImage: theme => ({
+                'header-background': "url('/src/images/Head_background.png')",
+               })
+        },
         fontFamily: {
             'display': 'Montserrat, sans-serif',
             'body': 'Noto Sans, sans-serif',
@@ -19,7 +23,7 @@ module.exports = {
             yellow: colors.amber,
             white: colors.white,
             black: colors.black,
-        }
+        },
     },
     variants: {
         extend: {},

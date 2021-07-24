@@ -14,14 +14,28 @@ module.exports = {
                     1000: '#0A0A0A',
                 },
             },
+            backgroundSize: {
+                '200%': '200%',
+            },
             keyframes: {
                 dropin: {
                     '100%': { transform: 'scale(1)' },
                     '0%': { transform: 'scale(1.1)' },
                 },
+                'gradient-x': {
+                    '0%': {
+                        'background-size':'200% 200%',
+                        'background-position': 'left center'
+                    },
+                    '100%': {
+                        'background-size':'200% 200%',
+                        'background-position': 'right center'
+                    }
+                },
             },
             animation: {
                 dropin: 'dropin 1s ease-out',
+                'gradient-x':'gradient-x 7s ease',
             },
         },
         fontFamily: {

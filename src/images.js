@@ -6,6 +6,7 @@ function imagecreator(contentimage) {
 
     const myImage = new Image();
     myImage.src = contentimage;
+    myImage.loading = 'lazy';
 
     element.appendChild(myImage);
 

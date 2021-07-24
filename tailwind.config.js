@@ -1,33 +1,34 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-    purge: ['./docs/*.html'],
+    purge: ['./docs/*.html', './docs/*.vue', './src/*.jsx'],
+    safelist: ['dark'],
     darkMode: 'class', // or 'media' or 'class'
     theme: {
         extend: {
-            backgroundImage: theme => ({
+            backgroundImage: (theme) => ({
                 'header-background': "url('/docs/images/Head_background.png')",
             }),
             colors: {
                 gray: {
-                    1000: '#0A0A0A'
+                    1000: '#0A0A0A',
                 },
             },
             keyframes: {
                 dropin: {
                     '100%': { transform: 'scale(1)' },
                     '0%': { transform: 'scale(1.1)' },
-                }
+                },
             },
             animation: {
                 dropin: 'dropin 1s ease-out',
             },
         },
         fontFamily: {
-            'display': 'Montserrat, sans-serif',
-            'body': 'Noto Sans, sans-serif',
+            display: 'Montserrat, sans-serif',
+            body: 'Noto Sans, sans-serif',
         },
-        
+
         colors: {
             // Build your palette here
             transparent: 'transparent',

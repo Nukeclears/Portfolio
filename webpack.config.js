@@ -62,13 +62,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html',
         }),
-        new CopyPlugin({
-            patterns: [
-                { from: "src/images", to: "images" },
-            ],
-            options: {
-                concurrency: 100,
-            },
-        }),
+        // new CopyPlugin({
+        //     patterns: [
+        //         { from: "src/images", to: "images" },
+        //     ],
+        //     options: {
+        //         concurrency: 100,
+        //     },
+        // }),
     ],
 }

@@ -1,13 +1,14 @@
 const path = require('path')
 var StyleLintPlugin = require('stylelint-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     mode: 'production',
     entry: {
         index: './src/index.js',
         print: './src/print.js',
-      },
+    },
     output: {
         path: path.resolve(__dirname, 'docs'),
         filename: '[name].bundle.js',
@@ -42,7 +43,7 @@ module.exports = {
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
-              },
+            },
         ],
     },
     devServer: {
@@ -60,6 +61,14 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: 'src/index.html',
-          }),
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: "src/images", to: "images" },
+            ],
+            options: {
+                concurrency: 100,
+            },
+        }),
     ],
 }

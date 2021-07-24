@@ -1,11 +1,17 @@
 const path = require('path')
 var StyleLintPlugin = require('stylelint-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
     mode: 'production',
-    entry: './src/index.js',
+    entry: {
+        index: './src/index.js',
+        print: './src/print.js',
+      },
     output: {
         path: path.resolve(__dirname, 'docs'),
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
+        clean: true,
     },
     module: {
         rules: [
@@ -29,6 +35,14 @@ module.exports = {
                     'postcss-loader',
                 ],
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+              },
         ],
     },
     devServer: {
@@ -44,5 +58,8 @@ module.exports = {
             quiet: false,
             emitErrors: true, // by default this is to true to check the CSS lint errors
         }),
+        new HtmlWebpackPlugin({
+            template: 'src/index.html',
+          }),
     ],
 }

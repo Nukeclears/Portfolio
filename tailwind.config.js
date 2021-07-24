@@ -6,9 +6,9 @@ module.exports = {
     darkMode: 'class', // or 'media' or 'class'
     theme: {
         extend: {
-            backgroundImage: (theme) => ({
-                'header-background': "url('/docs/images/Head_background.png')",
-            }),
+            // backgroundImage: (theme) => ({
+            //     'header-background': "url('/docs/images/Head_background.png')",
+            // }),
             colors: {
                 gray: {
                     1000: '#0A0A0A',
@@ -32,10 +32,21 @@ module.exports = {
                         'background-position': 'right center'
                     }
                 },
+                'gradient-y': {
+                    '0%': {
+                        'background-size':'200% 200%',
+                        'background-position': 'bottom center'
+                    },
+                    '100%': {
+                        'background-size':'200% 200%',
+                        'background-position': 'top center'
+                    }
+                },
             },
             animation: {
                 dropin: 'dropin 1s ease-out',
                 'gradient-x':'gradient-x 7s ease',
+                'gradient-y':'gradient-y 7s ease',
             },
         },
         fontFamily: {

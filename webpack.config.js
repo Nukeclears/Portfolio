@@ -64,7 +64,7 @@ module.exports = {
             emitErrors: true, //lint error checking
         }),
         new HtmlWebpackPlugin({
-            template: 'src/index.html',
+            template: 'src/pages/index.html',
         }),
         new ImageminPlugin({
             disable: process.env.NODE_ENV !== 'production', // Disable during development

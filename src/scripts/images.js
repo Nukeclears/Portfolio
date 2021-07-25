@@ -1,5 +1,5 @@
-import blockimage from './images/Block_image.png'
-import infoimage from './images/Block_image.png'
+import blockimage from '../images/Block_image.png'
+import infoimage from '../images/Block_image.png'
 var blockimages = document.getElementsByClassName('block_image')
 var infoimages = document.getElementsByClassName('info_image')
 

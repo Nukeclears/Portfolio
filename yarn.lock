@@ -8432,6 +8432,38 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"portfolio@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "portfolio@workspace:."
+  dependencies:
+    "@babel/core": ^7.14.8
+    "@babel/preset-env": ^7.14.8
+    autoprefixer: ^10.3.1
+    babel-loader: ^8.2.2
+    copy-webpack-plugin: ^9.0.1
+    css-loader: ^6.2.0
+    html-webpack-plugin: ^5.3.2
+    imagemin-webpack-plugin: ^2.4.2
+    less: ^4.1.1
+    less-loader: ^10.0.1
+    postcss: ^8.3.6
+    postcss-import: ^14.0.2
+    postcss-less: ^3.1.4
+    postcss-loader: ^6.1.1
+    postcss-preset-env: ^6.7.0
+    prettier: ^2.3.2
+    style-loader: ^3.2.1
+    stylelint: ^13.13.1
+    stylelint-config-standard: ^22.0.0
+    stylelint-webpack-plugin: ^3.0.1
+    tailwindcss: ^2.2.5
+    webpack: ^5.45.1
+    webpack-cli: ^4.7.2
+    webpack-dev-server: ^3.11.2
+    webpack-image-resize-loader: ^4.1.0
+  languageName: unknown
+  linkType: soft
+
 "posix-character-classes@npm:^0.1.0":
   version: 0.1.1
   resolution: "posix-character-classes@npm:0.1.1"
@@ -10816,38 +10848,6 @@ fsevents@~2.3.2:
   checksum: 66107046b7226051552d53c1260facfed03f4050373d3888620af7b1353f6a5429d9a4a5fb796c56c29b9dd5ffca7b661a815f42ec392cb5956432585578772a
   languageName: node
   linkType: hard
-
-"tailwind2@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "tailwind2@workspace:."
-  dependencies:
-    "@babel/core": ^7.14.8
-    "@babel/preset-env": ^7.14.8
-    autoprefixer: ^10.3.1
-    babel-loader: ^8.2.2
-    copy-webpack-plugin: ^9.0.1
-    css-loader: ^6.2.0
-    html-webpack-plugin: ^5.3.2
-    imagemin-webpack-plugin: ^2.4.2
-    less: ^4.1.1
-    less-loader: ^10.0.1
-    postcss: ^8.3.6
-    postcss-import: ^14.0.2
-    postcss-less: ^3.1.4
-    postcss-loader: ^6.1.1
-    postcss-preset-env: ^6.7.0
-    prettier: ^2.3.2
-    style-loader: ^3.2.1
-    stylelint: ^13.13.1
-    stylelint-config-standard: ^22.0.0
-    stylelint-webpack-plugin: ^3.0.1
-    tailwindcss: ^2.2.5
-    webpack: ^5.45.1
-    webpack-cli: ^4.7.2
-    webpack-dev-server: ^3.11.2
-    webpack-image-resize-loader: ^4.1.0
-  languageName: unknown
-  linkType: soft
 
 "tailwindcss@npm:^2.2.5":
   version: 2.2.7

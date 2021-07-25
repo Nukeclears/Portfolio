@@ -40,7 +40,7 @@ module.exports = {
                 use: {
                     loader: require.resolve('webpack-image-resize-loader'),
                     options: {
-                        width: 1000,
+                        width: 1200,
                     },
                 },
             },

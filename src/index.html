@@ -35,10 +35,10 @@
                         <div class="flex flex-col self-center animate-dropin w-72 lg:w-auto">
                             <div class="title_line"></div>
                             <div class="text-black dark:text-white uppercase">
-                                <h1 class="transition-colors duration-500 text-6xl lg:text-8xl font-bold">
+                                <h1 class="transition-colors duration-500 text-6xl lg:text-8xl font-black">
                                     thomas
                                 </h1>
-                                <h2 class="transition-colors duration-500 text-3xl lg:text-5xl font-bold">
+                                <h2 class="transition-colors duration-500 text-3xl lg:text-5xl font-thin">
                                     van deursen
                                 </h2>
                             </div>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="flex justify-center pb-6">
                         <svg xmlns="http://www.w3.org/2000/svg"
-                            class="h-10 w-10 dark:text-white text-black animate-pulse" fill="none" viewBox="0 0 24 24"
+                            class="h-10 w-10 dark:text-white text-black animate-ping" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
@@ -70,14 +70,12 @@
             <div class="px-7 lg:px-14">
                 <div class="flex flex-col gap-8 lg:gap-24">
                     <div class="container self-center">
-                        <h2
-                            class="text-black dark:text-white text-4xl lg:text-6xl font-bold font-display uppercase w-32 transition-colors duration-500">
-                            Blocks</h2>
+                        <h2 class="section_title">Blocks</h2>
                     </div>
                     <div class="grid grid-cols-1 lg:grid-cols-3 grid-flow-row gap-12 lg:gap-24">
-                        <a class="block_item border-red-500 dark:border-cyan-500" href="#">
+                        <a class="block_item group border-red-500 dark:border-cyan-500" href="#">
                             <div class="block_top bg-red-500 dark:bg-cyan-500">
-                                <div class="block_image img_responsive blockimage">
+                                <div class="block_image group-hover:opacity-100">
                                     <!-- js image goes here -->
                                 </div>
                             </div>
@@ -91,9 +89,9 @@
                                 </p>
                             </div>
                         </a>
-                        <a class="block_item border-red-500 dark:border-cyan-500" href="#">
+                        <a class="block_item group border-red-500 dark:border-cyan-500" href="#">
                             <div class="block_top bg-red-500 dark:bg-cyan-500">
-                                <div class="block_image img_responsive blockimage">
+                                <div class="block_image group-hover:opacity-100">
                                     <!-- js image goes here -->
                                 </div>
                             </div>
@@ -107,9 +105,9 @@
                                 </p>
                             </div>
                         </a>
-                        <a class="block_item border-red-500 dark:border-cyan-500" href="#">
+                        <a class="block_item group border-red-500 dark:border-cyan-500" href="#">
                             <div class="block_top bg-red-500 dark:bg-cyan-500">
-                                <div class="block_image img_responsive blockimage">
+                                <div class="block_image group-hover:opacity-100">
                                     <!-- js image goes here -->
                                 </div>
                             </div>
@@ -131,15 +129,15 @@
             <div class="px-7 lg:px14">
                 <div class="flex flex-col gap-8 lg:gap-24">
                     <div class="container self-center">
-                        <h2
-                            class="text-black dark:text-white text-4xl lg:text-6xl font-bold font-display uppercase w-32 transition-colors duration-500">
+                        <h2 class="section_title">
                             Information</h2>
                     </div>
                     <div class="container self-center">
                         <div class="flex flex-col lg:flex-row justify-center gap-12 lg:gap-24">
                             <div class="flex gap-4 -ml-4">
                                 <div class="w-1 dark:bg-cyan-500 bg-red-500"></div>
-                                <div class="flex flex-col gap-6 lg:w-96 dark:text-white text-black">
+                                <div
+                                    class="flex flex-col text-base lg:text-lg gap-6 lg:w-96 dark:text-white text-black font-body">
                                     <p>
                                         Ut a nisl id ante tempus hendrerit. Vivamus elementum semper nisi. Vestibulum
                                         purus
@@ -160,7 +158,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="h-48 lg:h-auto lg:w-full bg-red-500 dark:bg-cyan-500 rounded-xl -mx-7">
+                            <div class="h-48 lg:h-auto lg:w-full bg-red-500 dark:bg-cyan-500 rounded-xl">
                                 <div class="info_image h-full w-full opacity-90 lg:opacity-80"></div>
                             </div>
                         </div>
@@ -168,8 +166,31 @@
                 </div>
             </div>
         </div>
-        <div>
+        <div class="">
+            <div
+                class="bg-gradient-to-r from-cyan-200 dark:from-red-500 to-cyan-400 dark:to-pink-400 bg-opacity-70">
+                <div class="px-7 lg:px14 bg-gray-1000 bg-opacity-20 hover:bg-opacity-0 transition-all duration-200">
+                    <div class="flex flex-col">
+                        <div class="container self-center py-3">
+                            <div class="flex justify-between">
+                                <div class="flex flex-col text-black dark:text-white">
+                                    <div class="title_line mb-1 lg:mb-0"></div>
+                                    <p
+                                        class="text-xl lg:text-xl font-display font-black uppercase leading-none lg:-mb-1">
+                                        thomas
+                                    </p>
+                                </div>
+                                <div class="flex flex-col text-right text-black dark:text-white">
+                                    <a href="#" class="text-sm lg:text-base font-display font-semibold">
+                                        mail@mail.com
+                                    </a>
+                                </div>
+                            </div>
 
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

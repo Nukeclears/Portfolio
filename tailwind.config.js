@@ -1,7 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-    purge: ['./src/*.html', './src/*.vue', './src/*.js'],
+    purge: ['./src/*.html', './src/*.vue', './src/*.js', './src/*.less'],
     safelist: ['dark'],
     darkMode: 'class',
     theme: {
@@ -24,29 +24,29 @@ module.exports = {
                 },
                 'gradient-x': {
                     '0%': {
-                        'background-size':'200% 200%',
-                        'background-position': 'left center'
+                        'background-size': '200% 200%',
+                        'background-position': 'left center',
                     },
                     '100%': {
-                        'background-size':'200% 200%',
-                        'background-position': 'right center'
-                    }
+                        'background-size': '200% 200%',
+                        'background-position': 'right center',
+                    },
                 },
                 'gradient-y': {
                     '0%': {
-                        'background-size':'200% 200%',
-                        'background-position': 'bottom center'
+                        'background-size': '200% 200%',
+                        'background-position': 'bottom center',
                     },
                     '100%': {
-                        'background-size':'200% 200%',
-                        'background-position': 'top center'
-                    }
+                        'background-size': '200% 200%',
+                        'background-position': 'top center',
+                    },
                 },
             },
             animation: {
                 dropin: 'dropin 1s ease-out',
-                'gradient-x':'gradient-x 7s ease',
-                'gradient-y':'gradient-y 7s ease',
+                'gradient-x': 'gradient-x 7s ease',
+                'gradient-y': 'gradient-y 7s ease',
             },
         },
         fontFamily: {

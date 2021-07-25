@@ -8,8 +8,9 @@
         "tailwind"
       ]   
     }],
-    "font-family-no-missing-generic-family-keyword": [ false ],
+    "indentation": "tab",
     "block-no-empty": null,
+    "max-empty-lines": 2,
     "unit-allowed-list": ["em", "rem", "s"]
   }
 }

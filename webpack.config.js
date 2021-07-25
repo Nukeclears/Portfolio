@@ -1,6 +1,6 @@
 const path = require('path')
 var StyleLintPlugin = require('stylelint-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 var ImageminPlugin = require('imagemin-webpack-plugin').default
 
 module.exports = {
@@ -26,7 +26,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.less$/i,           //less to css
+                test: /\.less$/i, //less to css
                 use: [
                     'style-loader',
                     'css-loader',
@@ -38,12 +38,11 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
                 use: {
-                    loader: "webpack-image-resize-loader",
+                    loader: 'webpack-image-resize-loader',
                     options: {
                         width: 1000,
                     },
                 },
-
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
@@ -70,8 +69,8 @@ module.exports = {
         new ImageminPlugin({
             disable: process.env.NODE_ENV !== 'production', // Disable during development
             pngquant: {
-                quality: '90'
-            }
+                quality: '90',
+            },
         }),
         // new CopyPlugin({
         //     patterns: [

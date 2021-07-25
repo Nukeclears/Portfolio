@@ -2,7 +2,6 @@ import './Components.less'
 import './Main.less'
 import './images.js'
 
-import printMe from './print.js';
 const body = document.getElementById('body')
 
 if (

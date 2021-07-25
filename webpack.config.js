@@ -7,7 +7,6 @@ module.exports = {
     mode: 'production',
     entry: {
         index: './src/index.js',
-        print: './src/print.js',
     },
     output: {
         path: path.resolve(__dirname, 'docs'),
@@ -27,9 +26,8 @@ module.exports = {
                 },
             },
             {
-                test: /\.less$/i,
+                test: /\.less$/i,           //less to css
                 use: [
-                    // compiles Less to CSS
                     'style-loader',
                     'css-loader',
                     'less-loader',
@@ -61,10 +59,10 @@ module.exports = {
         new StyleLintPlugin({
             configFile: '.stylelintrc',
             context: 'src',
-            files: '**/*.scss',
+            files: '**/*.less',
             failOnError: false,
             quiet: false,
-            emitErrors: true, // by default this is to true to check the CSS lint errors
+            emitErrors: true, //lint error checking
         }),
         new HtmlWebpackPlugin({
             template: 'src/index.html',

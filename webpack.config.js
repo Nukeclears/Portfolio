@@ -19,7 +19,7 @@ module.exports = {
                 test: /\.js$/i,
                 include: path.resolve(__dirname, 'src'),
                 use: {
-                    loader: 'babel-loader',
+                    loader: require.resolve('babel-loader'),
                     options: {
                         presets: ['@babel/preset-env'],
                     },
@@ -28,17 +28,17 @@ module.exports = {
             {
                 test: /\.less$/i, //less to css
                 use: [
-                    'style-loader',
-                    'css-loader',
-                    'less-loader',
-                    'postcss-loader',
+                    require.resolve('style-loader'),
+                    require.resolve('css-loader'),
+                    require.resolve('less-loader'),
+                    require.resolve('postcss-loader'),
                 ],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
                 use: {
-                    loader: 'webpack-image-resize-loader',
+                    loader: require.resolve('webpack-image-resize-loader'),
                     options: {
                         width: 1000,
                     },

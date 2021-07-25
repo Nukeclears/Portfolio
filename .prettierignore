@@ -1,2 +1,4 @@
 # Ignore artifacts:
 node_modules
+*.html
+docs

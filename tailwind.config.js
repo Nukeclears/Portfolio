@@ -1,9 +1,9 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-    purge: ['./src/*.html', './src/*.vue', './src/*.jsx'],
+    purge: ['./src/*.html', './src/*.vue', './src/*.js'],
     safelist: ['dark'],
-    darkMode: 'class', // or 'media' or 'class'
+    darkMode: 'class',
     theme: {
         extend: {
             // backgroundImage: (theme) => ({
@@ -55,7 +55,6 @@ module.exports = {
         },
 
         colors: {
-            // Build your palette here
             transparent: 'transparent',
             current: 'currentColor',
             gray: colors.trueGray,
@@ -74,6 +73,7 @@ module.exports = {
     variants: {
         extend: {
             display: ['dark'],
+            borderColor: ['dark'],
         },
     },
     plugins: [],

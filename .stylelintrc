@@ -4,10 +4,12 @@
     "at-rule-no-unknown": [ true, {
       "ignoreAtRules": [
         "extends",
+        "layer",
         "tailwind"
-      ]
+      ]   
     }],
+    "font-family-no-missing-generic-family-keyword": [ false ],
     "block-no-empty": null,
-    "unit-whitelist": ["em", "rem", "s"]
+    "unit-allowed-list": ["em", "rem", "s"]
   }
 }

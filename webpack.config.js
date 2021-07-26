@@ -2,12 +2,11 @@ const path = require('path')
 var StyleLintPlugin = require('stylelint-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 var ImageminPlugin = require('imagemin-webpack-plugin').default
-const { VueLoaderPlugin } = require("vue-loader");
 
 module.exports = {
     mode: 'production',
     entry: {
-        index: './src/main.js',
+        index: './src/index.js',
     },
     cache: {
         type: 'filesystem',
@@ -25,15 +24,14 @@ module.exports = {
                 include: path.resolve(__dirname, 'src'),
                 use: {
                     loader: require.resolve('babel-loader'),
+                    options: {
+                        presets: ['@babel/preset-env'],
+                    },
                 },
             },
             {
-                test: /\.vue$/,
-                loader: "vue-loader",
-              },
-            {
-                test: /\.s?css$/,
-                include: path.resolve(__dirname, 'src/'),
+                test: /\.css$/i,
+                include: path.resolve(__dirname, 'src/styles'),
                 use: [
                     require.resolve('style-loader'),
                     require.resolve('css-loader'),
@@ -81,7 +79,6 @@ module.exports = {
                 quality: '90',
             },
         }),
-        new VueLoaderPlugin(),
         // new CopyPlugin({
         //     patterns: [
         //         { from: "src/images", to: "images" },
@@ -91,10 +88,4 @@ module.exports = {
         //     },
         // }),
     ],
-    resolve: {
-        alias: {
-          vue$: "vue/dist/vue.runtime.esm.js",
-        },
-        extensions: ["*", ".js", ".vue", ".json"],
-    },
 }

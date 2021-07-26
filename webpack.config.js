@@ -70,7 +70,8 @@ module.exports = {
             emitErrors: true, //lint error checking
         }),
         new HtmlWebpackPlugin({
-            template: 'src/index.html',
+            title: 'Portfolio',
+            template: path.resolve(__dirname, './src/index.html'),
         }),
         new ImageminPlugin({
             disable: process.env.NODE_ENV !== 'production', // Disable during development

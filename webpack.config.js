@@ -8,6 +8,10 @@ module.exports = {
     entry: {
         index: './src/index.js',
     },
+    cache: {
+        type: 'filesystem',
+        cacheDirectory: path.resolve(__dirname, '.temp_cache'),
+      },
     output: {
         path: path.resolve(__dirname, 'docs'),
         filename: '[name].bundle.js',
@@ -26,17 +30,18 @@ module.exports = {
                 },
             },
             {
-                test: /\.less$/i, //less to css
+                test: /\.css$/i,
+                include: path.resolve(__dirname, 'src/styles'),
                 use: [
                     require.resolve('style-loader'),
                     require.resolve('css-loader'),
-                    require.resolve('less-loader'),
                     require.resolve('postcss-loader'),
                 ],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
+                include: path.resolve(__dirname, 'src/images'),
                 use: {
                     loader: require.resolve('webpack-image-resize-loader'),
                     options: {
@@ -46,6 +51,7 @@ module.exports = {
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                include: path.resolve(__dirname, 'src/fonts'),
                 type: 'asset/resource',
             },
         ],
@@ -58,7 +64,7 @@ module.exports = {
         new StyleLintPlugin({
             configFile: '.stylelintrc',
             context: 'src',
-            files: '**/*.less',
+            files: '**/*.css',
             failOnError: false,
             quiet: false,
             emitErrors: true, //lint error checking

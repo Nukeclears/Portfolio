@@ -6,7 +6,8 @@
     "scripts": {
         "start": "webpack serve --mode=development --open",
         "build": "NODE_ENV=production && webpack",
-        "prettier": "prettier --write ."
+        "prettier": "prettier --write .",
+        "clean": "rm -r .temp_cache"
     },
     "keywords": [],
     "author": "Thomas van Deursen",
@@ -27,6 +28,7 @@
         "postcss-less": "^3.1.4",
         "postcss-loader": "^6.1.1",
         "postcss-preset-env": "^6.7.0",
+        "precss": "^4.0.0",
         "prettier": "^2.3.2",
         "style-loader": "^3.2.1",
         "stylelint": "^13.13.1",

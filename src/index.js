@@ -1,5 +1,5 @@
-import './styles/Main.less'
-import './styles/Components.less'
-import './styles/Images.less'
+import './styles/Main.css'
+import './styles/Components.css'
+import './styles/Images.css'
 import './scripts/images.js'
 import './scripts/main.js'

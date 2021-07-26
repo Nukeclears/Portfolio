@@ -27,12 +27,18 @@
         "media-feature-name-no-vendor-prefix": true,
         "media-feature-colon-space-before": "always",
         "media-feature-colon-space-after": "always",
-        "at-rule-no-unknown": [ true, {
-        "ignoreAtRules": [
-          "extends",
-          "layer",
-          "tailwind"
-        ]   
-      }],
+        'at-rule-no-unknown': [
+        true,
+        {
+          ignoreAtRules: [
+            'tailwind',
+            'apply',
+            'layer',
+            'variants',
+            'responsive',
+            'screen',
+          ],
+        },
+      ],
     }
 }

@@ -73,7 +73,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             title: 'Portfolio',
-            template: path.resolve(__dirname, './src/index.html'),
+            template: path.resolve(__dirname, "src", "index.html"),
         }),
         new ImageminPlugin({
             disable: process.env.NODE_ENV !== 'production', // Disable during development

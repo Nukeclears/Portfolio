@@ -29,10 +29,10 @@ module.exports = {
             },
             {
                 test: /\.vue$/,
-                loader: "vue-loader",
+                use: 'vue-loader',
               },
             {
-                test: /\.s?css$/,
+                test: /\.css$/i,
                 include: path.resolve(__dirname, 'src/'),
                 use: [
                     require.resolve('style-loader'),

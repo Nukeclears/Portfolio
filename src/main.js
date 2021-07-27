@@ -1,9 +1,9 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
+import './styles/Main.css';
 import './styles/Components.css';
 import './styles/Images.css';
-import './styles/Main.css';
 
 
 new Vue({

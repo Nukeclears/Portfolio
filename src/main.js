@@ -62,6 +62,8 @@ function darktoggle() {
     localStorage.theme = 'dark'
     localStorage.removeItem('theme')
 
+    try {
+
     document.getElementById('darktoggle').addEventListener('click', function () {
         if (body.classList.contains('dark')) {
             body.classList.remove('dark')
@@ -69,4 +71,7 @@ function darktoggle() {
             body.classList.add('dark')
         }
     })
+    } catch {
+        console.log("no_button");
+}
 }

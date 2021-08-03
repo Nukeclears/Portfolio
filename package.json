@@ -20,11 +20,13 @@
     "devDependencies": {
         "@babel/core": "^7.14.8",
         "@babel/preset-env": "^7.14.8",
+        "@tsconfig/recommended": "^1.0.1",
         "autoprefixer": "^10.3.1",
         "babel-loader": "^8.2.2",
         "copy-webpack-plugin": "^9.0.1",
         "core-js": "^3.15.2",
         "css-loader": "^6.2.0",
+        "gulp": "^4.0.2",
         "html-webpack-plugin": "^5.3.2",
         "imagemin-webpack-plugin": "^2.4.2",
         "postcss": "^8.3.6",

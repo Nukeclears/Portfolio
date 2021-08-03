@@ -9,9 +9,10 @@ import infoimage from './images/Block_image.png'
 
 
 new Vue({
-  router,
-  render: (h) => h(App),
+    router,
+    render: (h) => h(App),
 }).$mount("#app");
+
 
 var blockimages = document.getElementsByClassName('block_image')
 var infoimages = document.getElementsByClassName('info_image')
@@ -33,16 +34,7 @@ function imagecreator(image, elements, alttext, classes) {
     })
 }
 
-document.addEventListener(
-    'DOMContentLoaded',
-    function () {
-        imagecreator(blockimage, blockimages, 'block image', 'rounded-xl')
-        imagecreator(blockimage, detailimages, 'detail image', 'w-full object-cover')
-        darktoggle()
-        //imagecreator(infoimage, infoimages, 'info image', 'object-cover');
-    },
-    false
-)
+
 
 
 function darktoggle() {
@@ -64,14 +56,25 @@ function darktoggle() {
 
     try {
 
-    document.getElementById('darktoggle').addEventListener('click', function () {
-        if (body.classList.contains('dark')) {
-            body.classList.remove('dark')
-        } else {
-            body.classList.add('dark')
-        }
-    })
+        document.getElementById('darktoggle').addEventListener('click', function () {
+            if (body.classList.contains('dark')) {
+                body.classList.remove('dark')
+            } else {
+                body.classList.add('dark')
+            }
+        })
     } catch {
         console.log("no_button");
+    }
 }
-}
+
+document.addEventListener(
+    'DOMContentLoaded',
+    function () {
+        imagecreator(blockimage, blockimages, 'block image', 'rounded-xl')
+        imagecreator(blockimage, detailimages, 'detail image', 'w-full object-cover')
+        darktoggle()
+        //imagecreator(infoimage, infoimages, 'info image', 'object-cover');
+    },
+    false
+)

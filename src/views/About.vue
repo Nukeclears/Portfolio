@@ -1,5 +1,3 @@
 <template>
-  <div>
-    <h1>test</h1>
-  </div>
+    <h1 class="text-black">test page</h1>
 </template>

@@ -3164,15 +3164,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"copy-anything@npm:^2.0.1":
-  version: 2.0.3
-  resolution: "copy-anything@npm:2.0.3"
-  dependencies:
-    is-what: ^3.12.0
-  checksum: ea938e0ec79ed51b000e69498fb6f43f9416128370afc0fbf3d32f64c4f4b8b9103a9e7974627fb753498a477da1f1102fb1b638db898a0ba10b3438bb81fa11
-  languageName: node
-  linkType: hard
-
 "copy-descriptor@npm:^0.1.0":
   version: 0.1.1
   resolution: "copy-descriptor@npm:0.1.1"
@@ -4030,7 +4021,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"errno@npm:^0.1.1, errno@npm:^0.1.3":
+"errno@npm:^0.1.3":
   version: 0.1.8
   resolution: "errno@npm:0.1.8"
   dependencies:
@@ -5573,7 +5564,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"iconv-lite@npm:0.4.24, iconv-lite@npm:^0.4.4":
+"iconv-lite@npm:0.4.24":
   version: 0.4.24
   resolution: "iconv-lite@npm:0.4.24"
   dependencies:
@@ -5618,15 +5609,6 @@ fsevents@~2.3.2:
   version: 5.1.8
   resolution: "ignore@npm:5.1.8"
   checksum: b08e3d5b5d94eca13475f29a5d47d221060e9cdd7e38d7647088e29d90130669a970fecbc4cdb41b8fa295c6673740c729d3dc05dadc381f593efb42282cbf9f
-  languageName: node
-  linkType: hard
-
-"image-size@npm:~0.5.0":
-  version: 0.5.5
-  resolution: "image-size@npm:0.5.5"
-  bin:
-    image-size: bin/image-size.js
-  checksum: 32f6203aebed2e5f1eafbef194cf9a19d8dddd6fe0157d8e2667cfc1d89ee8f9281b8c71e0ec04ee0c0ba654417b172d41abb1da5ee8924631d7ab1d7f9e64f9
   languageName: node
   linkType: hard
 
@@ -6438,13 +6420,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"is-what@npm:^3.12.0":
-  version: 3.14.1
-  resolution: "is-what@npm:3.14.1"
-  checksum: a7e2470aa98b227c7294c92999211db6847309bed12ef6c4c29d9a67994a709cdf7f29c84fed96eadb7507fc608d86343f3bb6a17af1004a4b00e0dbb0f5c01a
-  languageName: node
-  linkType: hard
-
 "is-windows@npm:^1.0.2":
   version: 1.0.2
   resolution: "is-windows@npm:1.0.2"
@@ -6713,53 +6688,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"less-loader@npm:^10.0.1":
-  version: 10.0.1
-  resolution: "less-loader@npm:10.0.1"
-  dependencies:
-    klona: ^2.0.4
-  peerDependencies:
-    less: ^3.5.0 || ^4.0.0
-    webpack: ^5.0.0
-  checksum: 5dbc9a40f2204e851c384fdcd202d9073ed10c69b0742f3d367d6597b0e69fb6759ca79660282e05191fc9bbb7dc6fd0e41d5fed85886fe279949f52f0520cce
-  languageName: node
-  linkType: hard
-
-"less@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "less@npm:4.1.1"
-  dependencies:
-    copy-anything: ^2.0.1
-    errno: ^0.1.1
-    graceful-fs: ^4.1.2
-    image-size: ~0.5.0
-    make-dir: ^2.1.0
-    mime: ^1.4.1
-    needle: ^2.5.2
-    parse-node-version: ^1.0.1
-    source-map: ~0.6.0
-    tslib: ^1.10.0
-  dependenciesMeta:
-    errno:
-      optional: true
-    graceful-fs:
-      optional: true
-    image-size:
-      optional: true
-    make-dir:
-      optional: true
-    mime:
-      optional: true
-    needle:
-      optional: true
-    source-map:
-      optional: true
-  bin:
-    lessc: bin/lessc
-  checksum: a4fb3be59be0fdcc289c24f09e3b856a63d1bb9fa444209a712ce11b2944dad04007ad04c1d3b2708d2df58dbfaec6d8af7a96da80731c359c8927bfe2a97409
-  languageName: node
-  linkType: hard
-
 "lilconfig@npm:^2.0.3":
   version: 2.0.3
   resolution: "lilconfig@npm:2.0.3"
@@ -6997,16 +6925,6 @@ fsevents@~2.3.2:
   dependencies:
     pify: ^3.0.0
   checksum: 20a14043c61faab5ddc7844e3b325281c81b0975bbe4ae657774fdb51216b6a07b5c5cd90bdaf6a9dfcd7a12e81d9ddb5b3d47c9f27a65f6fea66be701f35b36
-  languageName: node
-  linkType: hard
-
-"make-dir@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "make-dir@npm:2.1.0"
-  dependencies:
-    pify: ^4.0.1
-    semver: ^5.6.0
-  checksum: 94e2ab9dda2198508057fd75f4e0b5998ee2d1e390c1e03172c32104dbd750ba2314376fec540ce517c8ed7fc526aeebc7d193315d060e229fec0fe55feb2228
   languageName: node
   linkType: hard
 
@@ -7267,7 +7185,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"mime@npm:1.6.0, mime@npm:^1.4.1":
+"mime@npm:1.6.0":
   version: 1.6.0
   resolution: "mime@npm:1.6.0"
   bin:
@@ -7562,19 +7480,6 @@ fsevents@~2.3.2:
   version: 1.0.2
   resolution: "napi-build-utils@npm:1.0.2"
   checksum: e4dfbec94d315533fea33a96ef5fb4de0d9e8828f2bb2b30e38de089500dfe35fe058ea5bcd72e104381457263f854c3d52d4d8700df9e1f9e6b78e9500ba435
-  languageName: node
-  linkType: hard
-
-"needle@npm:^2.5.2":
-  version: 2.8.0
-  resolution: "needle@npm:2.8.0"
-  dependencies:
-    debug: ^3.2.6
-    iconv-lite: ^0.4.4
-    sax: ^1.2.4
-  bin:
-    needle: bin/needle
-  checksum: afc8eada2a9069f4c123938bd2e597e355ce58903c6b988760bc041473ee0add9f258906c00b3bafa5b4e6ffee21ce021485f12cd055f6fc6855fb12798489e3
   languageName: node
   linkType: hard
 
@@ -8229,13 +8134,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"parse-node-version@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "parse-node-version@npm:1.0.1"
-  checksum: 79ae38178715cd9ebec482d876b8bc773c98e017ccdb50d40937e9d65ece0ebf7eef507ed100e182e352b0bacfe2acba6b3b3b7ae978be20a79a91a4853bb27b
-  languageName: node
-  linkType: hard
-
 "parseurl@npm:~1.3.2, parseurl@npm:~1.3.3":
   version: 1.3.3
   resolution: "parseurl@npm:1.3.3"
@@ -8465,11 +8363,8 @@ fsevents@~2.3.2:
     css-loader: ^6.2.0
     html-webpack-plugin: ^5.3.2
     imagemin-webpack-plugin: ^2.4.2
-    less: ^4.1.1
-    less-loader: ^10.0.1
     postcss: ^8.3.6
     postcss-import: ^14.0.2
-    postcss-less: ^3.1.4
     postcss-loader: ^6.1.1
     postcss-preset-env: ^6.7.0
     precss: ^4.0.0
@@ -9929,7 +9824,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"sax@npm:^1.2.4, sax@npm:~1.2.4":
+"sax@npm:~1.2.4":
   version: 1.2.4
   resolution: "sax@npm:1.2.4"
   checksum: 9d7668d69105e89e2c1a4b2fdc12c72e1a2f78b825f7b4a8a2ea5cdfebf70920bd17715bed55264c3b3959616a0695f8ad2d098bf6944fbd0953ee9c695dceef
@@ -11267,13 +11162,6 @@ fsevents@~2.3.2:
   version: 1.0.5
   resolution: "trough@npm:1.0.5"
   checksum: c116d9e7ddb7d9eca4ebe4c6acb4d909829e97824d9a79caec8af0899120e55b9a8311a7821706864728fbdc72b38644ca25e9357de28a50a10ed4bd8e5d6234
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^1.10.0":
-  version: 1.14.1
-  resolution: "tslib@npm:1.14.1"
-  checksum: f44fe7f216946b17d3e3074df3746372703cf24e9127b4c045511456e8e4bf25515fb0a1bb3937676cc305651c5d4fcb6377b0588a4c6a957e748c4c28905d17
   languageName: node
   linkType: hard
 

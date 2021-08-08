@@ -3,6 +3,7 @@ var StyleLintPlugin = require('stylelint-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 var ImageminPlugin = require('imagemin-webpack-plugin').default
 const { VueLoaderPlugin } = require("vue-loader");
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
     mode: 'production',
@@ -82,6 +83,14 @@ module.exports = {
             },
         }),
         new VueLoaderPlugin(),
+        new BrowserSyncPlugin({
+            // browse to http://localhost:3000/ during development,
+            // ./public directory is being served
+            host: 'localhost',
+            port: 3000,
+            proxy: "localhost:8080",
+            //server: { baseDir: ['src'] }
+          })
         // new CopyPlugin({
         //     patterns: [
         //         { from: "src/images", to: "images" },

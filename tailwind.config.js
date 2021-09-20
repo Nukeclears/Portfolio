@@ -2,9 +2,12 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
     mode: 'jit',
-    purge: ['./src/**/*.{js,jsx,ts,tsx,vue,html}'],
+    purge: ['./src/**/*'],
     darkMode: 'class',
     theme: {
+        container: {
+            center: true,
+          },
         extend: {
         },
         fontFamily: {
@@ -20,6 +23,7 @@ module.exports = {
             rose: colors.rose,
             blue: colors.blue,
             cyan: colors.cyan,
+            green: colors.green,
             yellow: colors.amber,
             pink: colors.pink,
             orange: colors.orange,
@@ -27,5 +31,7 @@ module.exports = {
             black: colors.black,
         },
     },
-    plugins: [],
+    plugins: [
+        require('daisyui'),
+    ],
 }

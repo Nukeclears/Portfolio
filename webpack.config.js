@@ -53,7 +53,7 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
-                include: path.resolve(__dirname, 'src/images'),
+                include: path.resolve(__dirname, 'src'),
                 // use: {
                 //     loader: require.resolve('webpack-image-resize-loader'),
                 //     options: {

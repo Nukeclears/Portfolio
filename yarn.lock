@@ -1224,13 +1224,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/sass-import-resolve@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@csstools/sass-import-resolve@npm:1.0.0"
-  checksum: 7f2d0399e2c09521fe50c0a0209e7fd3ebee76b75c08d440f897a0406fa0eed086f168342352274827f8e8864d3ccef22aed3aeaf3aad0499ccdec5912f10de9
-  languageName: node
-  linkType: hard
-
 "@discoveryjs/json-ext@npm:^0.5.0":
   version: 0.5.3
   resolution: "@discoveryjs/json-ext@npm:0.5.3"
@@ -3929,6 +3922,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"daisyui@npm:^1.14.0":
+  version: 1.14.0
+  resolution: "daisyui@npm:1.14.0"
+  checksum: 22262b6a3ba8e3b98120532538c1d9771c3bfd7f7defe371d6a8c932aaebf8dfe8f364458fe0b1598c8f197ad4e2b4a1cf6b80d75d68f675736e3fba576e3f51
+  languageName: node
+  linkType: hard
+
 "de-indent@npm:^1.0.2":
   version: 1.0.2
   resolution: "de-indent@npm:1.0.2"
@@ -6186,13 +6186,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"has-flag@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "has-flag@npm:1.0.0"
-  checksum: ce3f8ae978e70f16e4bbe17d3f0f6d6c0a3dd3b62a23f97c91d0fda9ed8e305e13baf95cc5bee4463b9f25ac9f5255de113165c5fb285e01b8065b2ac079b301
-  languageName: node
-  linkType: hard
-
 "has-flag@npm:^3.0.0":
   version: 3.0.0
   resolution: "has-flag@npm:3.0.0"
@@ -7574,13 +7567,6 @@ fsevents@~2.3.2:
   bin:
     jpegtran: cli.js
   checksum: 0617bdb7f30328eb2ad2defa8c80a84ab0353599d6ae6c8ea78a5ce0798e70ebacb96acd8a26b458c0d0f25bcfe836c7d695d74b4db0b18e85b6677bb16f6628
-  languageName: node
-  linkType: hard
-
-"js-base64@npm:^2.1.9":
-  version: 2.6.4
-  resolution: "js-base64@npm:2.6.4"
-  checksum: 5f4084078d6c46f8529741d110df84b14fac3276b903760c21fa8cc8521370d607325dfe1c1a9fbbeaae1ff8e602665aaeef1362427d8fef704f9e3659472ce8
   languageName: node
   linkType: hard
 
@@ -9738,6 +9724,7 @@ fsevents@~2.3.2:
     browser-sync: ^2.27.5
     browser-sync-webpack-plugin: ^2.3.0
     css-loader: ^6.2.0
+    daisyui: ^1.14.0
     gulp: ^4.0.2
     html-webpack-plugin: ^5.3.2
     imagemin-webpack-plugin: ^2.4.2
@@ -9745,7 +9732,6 @@ fsevents@~2.3.2:
     postcss-import: ^14.0.2
     postcss-loader: ^6.1.1
     postcss-preset-env: ^6.7.0
-    precss: ^4.0.0
     style-loader: ^3.2.1
     stylelint: ^13.13.1
     stylelint-config-standard: ^22.0.0
@@ -9776,25 +9762,6 @@ fsevents@~2.3.2:
   version: 0.1.1
   resolution: "posix-character-classes@npm:0.1.1"
   checksum: dedb99913c60625a16050cfed2fb5c017648fc075be41ac18474e1c6c3549ef4ada201c8bd9bd006d36827e289c571b6092e1ef6e756cdbab2fd7046b25c6442
-  languageName: node
-  linkType: hard
-
-"postcss-advanced-variables@npm:^3.0.0":
-  version: 3.0.1
-  resolution: "postcss-advanced-variables@npm:3.0.1"
-  dependencies:
-    "@csstools/sass-import-resolve": ^1.0.0
-    postcss: ^7.0.6
-  checksum: 414e9147455021bec1b040d7c06b24ce9774d540dfa2c1bce985ddde68cbb7df0513c34a33e77bae81540fb335cb57792bf36c6dd5ae4616082be0700b7083d0
-  languageName: node
-  linkType: hard
-
-"postcss-atroot@npm:^0.1.3":
-  version: 0.1.3
-  resolution: "postcss-atroot@npm:0.1.3"
-  dependencies:
-    postcss: ^5.0.5
-  checksum: 2f9e70dbaa12dd034ac3e47d6242442b0862aa0c8b277ee612c087cda44c1e01f93a0214c03790708e5817802bba96690c7b48fda1d869cde74c6c6d5dad3ec6
   languageName: node
   linkType: hard
 
@@ -9916,16 +9883,6 @@ fsevents@~2.3.2:
     postcss: ^7.0.2
     postcss-values-parser: ^2.0.0
   checksum: 0cfa2e6cad5123cce39dcf5af332ec3b0e3e09b54d5142225f255914079d2afda3f1052e60f4b6d3bccf7eb9d592325b7421f1ecc6674ccb13c267a721fc3128
-  languageName: node
-  linkType: hard
-
-"postcss-extend-rule@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "postcss-extend-rule@npm:2.0.0"
-  dependencies:
-    postcss: ^6.0.22
-    postcss-nesting: ^5.0.0
-  checksum: af80fbd9c0fe775643fe0776456a1b709e8ca00ff9e6afa76c93a1249a2c3f6916d4f719d7764b7ab718bebbf99199f0dbc0ee17db39e72fa251c3efa52e0f9b
   languageName: node
   linkType: hard
 
@@ -10149,25 +10106,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"postcss-nested@npm:^4.1.0":
-  version: 4.2.3
-  resolution: "postcss-nested@npm:4.2.3"
-  dependencies:
-    postcss: ^7.0.32
-    postcss-selector-parser: ^6.0.2
-  checksum: 039aef9a61c2e7108a4c05e2a54ba7b7b79aec8e251e7894fbea3f94f01cf5cc950e0a566b4bbbd45cd34106f475150e3a8be97329fe33727eebe47945315a25
-  languageName: node
-  linkType: hard
-
-"postcss-nesting@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "postcss-nesting@npm:5.0.0"
-  dependencies:
-    postcss: ^6.0.21
-  checksum: 767bf7812cc5bce217031d9943cc0e9b012f49aa0be1d88eddeb91010b903a2c4ab8b58de7eaa2aca8eccf9ee2cf07a8561a1f5f7245d386f76f71032bf770de
-  languageName: node
-  linkType: hard
-
 "postcss-nesting@npm:^7.0.0":
   version: 7.0.1
   resolution: "postcss-nesting@npm:7.0.1"
@@ -10205,7 +10143,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"postcss-preset-env@npm:^6.4.0, postcss-preset-env@npm:^6.7.0":
+"postcss-preset-env@npm:^6.7.0":
   version: 6.7.0
   resolution: "postcss-preset-env@npm:6.7.0"
   dependencies:
@@ -10247,17 +10185,6 @@ fsevents@~2.3.2:
     postcss-selector-matches: ^4.0.0
     postcss-selector-not: ^4.0.0
   checksum: 209cbb63443a1631aa97ccfc3b95b1ff519ddaeb672f84d6af501bd9e9ad6727680b5b1bffb8209322e47d93029a69df6064f75cd0b7633b6df943cbef33f22e
-  languageName: node
-  linkType: hard
-
-"postcss-property-lookup@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "postcss-property-lookup@npm:2.0.0"
-  dependencies:
-    object-assign: ^4.0.1
-    postcss: ^6.0.6
-    tcomb: ^3.2.21
-  checksum: 4d26dd5b0b7c6e36680f94e81490cd7691115d4654e47e444b01210ba8447cafaa53c08c1a7b169236db2e2fc122be267957385d1024fdaa5f07ee45c4c8e3d4
   languageName: node
   linkType: hard
 
@@ -10401,29 +10328,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"postcss@npm:^5.0.5":
-  version: 5.2.18
-  resolution: "postcss@npm:5.2.18"
-  dependencies:
-    chalk: ^1.1.3
-    js-base64: ^2.1.9
-    source-map: ^0.5.6
-    supports-color: ^3.2.3
-  checksum: 0cb88e7c887b9b55d0362159846ec9fbf330892c5853b0e346929e723d215295ffae48d9a0f219f64f74767f9114802dc1b5cd21c327184f958b7efaa93dd629
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^6.0.21, postcss@npm:^6.0.22, postcss@npm:^6.0.6":
-  version: 6.0.23
-  resolution: "postcss@npm:6.0.23"
-  dependencies:
-    chalk: ^2.4.1
-    source-map: ^0.6.1
-    supports-color: ^5.4.0
-  checksum: cc6cb2c1dbcdefa6f57a71d67fe535c9e96543298bbe28f9a6a64c4f1e21b6127113890dd4cda8873d3f4e6613a0566b7b4bbb230204f3a9a309190bda065d81
-  languageName: node
-  linkType: hard
-
 "postcss@npm:^8.1.6, postcss@npm:^8.2.1, postcss@npm:^8.2.15, postcss@npm:^8.3.6":
   version: 8.3.6
   resolution: "postcss@npm:8.3.6"
@@ -10455,21 +10359,6 @@ fsevents@~2.3.2:
   bin:
     prebuild-install: bin.js
   checksum: b258198789209bb8df853bbc3371caa7f85ca323e180e564bd6031b02c47eee1d371657a8e54685a3674d16281ea879d7947d019acb031c641c89799a25af277
-  languageName: node
-  linkType: hard
-
-"precss@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "precss@npm:4.0.0"
-  dependencies:
-    postcss: ^7.0.6
-    postcss-advanced-variables: ^3.0.0
-    postcss-atroot: ^0.1.3
-    postcss-extend-rule: ^2.0.0
-    postcss-nested: ^4.1.0
-    postcss-preset-env: ^6.4.0
-    postcss-property-lookup: ^2.0.0
-  checksum: 9b6ef0b1b63ce0bcb981aca045de08d0982ed8c04f50b121f37a704c7649211ebf6e6b8973dc56bb3ce48546ab8c61ade836504fe38adcc7f08f9c9caee22cfe
   languageName: node
   linkType: hard
 
@@ -12472,16 +12361,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"supports-color@npm:^3.2.3":
-  version: 3.2.3
-  resolution: "supports-color@npm:3.2.3"
-  dependencies:
-    has-flag: ^1.0.0
-  checksum: 56afc05fa87d00100d90148c4d0a6e20a0af0d56dca5c54d4d40b2553ee737dab0ca4e8b53c4471afc035227b5b44dfa4824747a7f01ad733173536f7da6fbbb
-  languageName: node
-  linkType: hard
-
-"supports-color@npm:^5.3.0, supports-color@npm:^5.4.0":
+"supports-color@npm:^5.3.0":
   version: 5.5.0
   resolution: "supports-color@npm:5.5.0"
   dependencies:
@@ -12681,13 +12561,6 @@ fsevents@~2.3.2:
     mkdirp: ^1.0.3
     yallist: ^4.0.0
   checksum: ffd7d67d5bfa6f8ef0024c0c7c6da575f2257988f022e61299372db1d50b78868cfaf04d13abe41f480d593ace5628b44d2998ac7b0bda883d1385b578877514
-  languageName: node
-  linkType: hard
-
-"tcomb@npm:^3.2.21":
-  version: 3.2.29
-  resolution: "tcomb@npm:3.2.29"
-  checksum: 484e39a06ce59f1752b7589cb5fce9a7f58bd34ba11a48045d5d955c7bb7133d5617f8bf2dcf2b27f06df0dffe3734097c15179c86e4f9e5bff224c99c90aa8c
   languageName: node
   linkType: hard
 

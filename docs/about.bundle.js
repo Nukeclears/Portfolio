@@ -1,1 +1,0 @@
-(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[443],{9395:function(e,t,n){"use strict";n.r(t),n.d(t,{default:function(){return r}});var r=(0,n(1900).Z)({},(function(){var e=this;e.$createElement;return e._self._c,e._m(0)}),[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("h1",[e._v("test")])])}],!1,null,null,null).exports}}]);

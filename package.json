@@ -10,32 +10,33 @@
     "stylelint": {
         "extends": "stylelint-config-standard",
         "rules": {
-          "indentation": 4,
-          "unit-allowed-list": [
-            "rem",
-            "vw",
-            "vh",
-            "%",
-            "deg",
-            "s",
-            "ms"
-          ],
-          "at-rule-no-unknown": [
-            true,
-            {
-              "ignoreAtRules": [
-                "tailwind",
-                "apply",
-                "variants",
-                "responsive",
-                "screen"
-              ]
-            }
-          ],
-          "declaration-block-trailing-semicolon": null,
-          "no-descending-specificity": null
+            "indentation": 4,
+            "unit-allowed-list": [
+                "rem",
+                "vw",
+                "vh",
+                "%",
+                "deg",
+                "s",
+                "ms"
+            ],
+            "at-rule-no-unknown": [
+                true,
+                {
+                    "ignoreAtRules": [
+                        "tailwind",
+                        "apply",
+                        "variants",
+                        "responsive",
+                        "screen"
+                    ]
+                }
+            ],
+            "declaration-block-trailing-semicolon": null,
+            "no-descending-specificity": null,
+            "no-empty-source": null
         }
-      },
+    },
     "keywords": [],
     "author": "Thomas van Deursen",
     "license": "ISC",
@@ -52,6 +53,7 @@
         "browser-sync": "^2.27.5",
         "browser-sync-webpack-plugin": "^2.3.0",
         "css-loader": "^6.2.0",
+        "daisyui": "^1.14.0",
         "gulp": "^4.0.2",
         "html-webpack-plugin": "^5.3.2",
         "imagemin-webpack-plugin": "^2.4.2",
@@ -59,7 +61,6 @@
         "postcss-import": "^14.0.2",
         "postcss-loader": "^6.1.1",
         "postcss-preset-env": "^6.7.0",
-        "precss": "^4.0.0",
         "style-loader": "^3.2.1",
         "stylelint": "^13.13.1",
         "stylelint-config-standard": "^22.0.0",

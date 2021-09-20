@@ -1,59 +1,16 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-    purge: ['./src/views/Home.vue', './src/views/About.vue'],
-    safelist: ['dark'],
+    mode: 'jit',
+    purge: ['./src/**/*.{js,jsx,ts,tsx,vue,html}'],
     darkMode: 'class',
     theme: {
         extend: {
-            // backgroundImage: (theme) => ({
-            //     'header-background': "url('/docs/images/Head_background.png')",
-            // }),
-            colors: {
-                gray: {
-                    1000: '#0A0A0A',
-                },
-            },
-            backgroundSize: {
-                '200%': '200%',
-            },
-            keyframes: {
-                dropin: {
-                    '100%': { transform: 'scale(1)' },
-                    '0%': { transform: 'scale(1.1)' },
-                },
-                'gradient-x': {
-                    '0%': {
-                        'background-size': '200% 200%',
-                        'background-position': 'left center',
-                    },
-                    '100%': {
-                        'background-size': '200% 200%',
-                        'background-position': 'right center',
-                    },
-                },
-                'gradient-y': {
-                    '0%': {
-                        'background-size': '200% 200%',
-                        'background-position': 'bottom center',
-                    },
-                    '100%': {
-                        'background-size': '200% 200%',
-                        'background-position': 'top center',
-                    },
-                },
-            },
-            animation: {
-                dropin: 'dropin 1s ease-out',
-                'gradient-x': 'gradient-x 7s ease',
-                'gradient-y': 'gradient-y 7s ease',
-            },
         },
         fontFamily: {
             display: 'Montserrat, sans-serif',
             body: 'Noto Sans, sans-serif',
         },
-
         colors: {
             transparent: 'transparent',
             current: 'currentColor',
@@ -68,12 +25,6 @@ module.exports = {
             orange: colors.orange,
             white: colors.white,
             black: colors.black,
-        },
-    },
-    variants: {
-        extend: {
-            display: ['dark'],
-            borderColor: ['dark'],
         },
     },
     plugins: [],

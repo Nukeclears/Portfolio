@@ -5,10 +5,37 @@
     "main": "index.js",
     "scripts": {
         "start": "webpack serve --mode=development --open",
-        "build": "NODE_ENV=production && webpack",
-        "prettier": "prettier --write .",
-        "clean": "rm -r .temp_cache"
+        "build": "NODE_ENV=production && webpack"
     },
+    "stylelint": {
+        "extends": "stylelint-config-standard",
+        "rules": {
+          "indentation": 4,
+          "unit-allowed-list": [
+            "rem",
+            "vw",
+            "vh",
+            "%",
+            "deg",
+            "s",
+            "ms"
+          ],
+          "at-rule-no-unknown": [
+            true,
+            {
+              "ignoreAtRules": [
+                "tailwind",
+                "apply",
+                "variants",
+                "responsive",
+                "screen"
+              ]
+            }
+          ],
+          "declaration-block-trailing-semicolon": null,
+          "no-descending-specificity": null
+        }
+      },
     "keywords": [],
     "author": "Thomas van Deursen",
     "license": "ISC",
@@ -20,13 +47,10 @@
     "devDependencies": {
         "@babel/core": "^7.14.8",
         "@babel/preset-env": "^7.14.8",
-        "@tsconfig/recommended": "^1.0.1",
         "autoprefixer": "^10.3.1",
         "babel-loader": "^8.2.2",
         "browser-sync": "^2.27.5",
         "browser-sync-webpack-plugin": "^2.3.0",
-        "copy-webpack-plugin": "^9.0.1",
-        "core-js": "^3.15.2",
         "css-loader": "^6.2.0",
         "gulp": "^4.0.2",
         "html-webpack-plugin": "^5.3.2",
@@ -36,7 +60,6 @@
         "postcss-loader": "^6.1.1",
         "postcss-preset-env": "^6.7.0",
         "precss": "^4.0.0",
-        "prettier": "^2.3.2",
         "style-loader": "^3.2.1",
         "stylelint": "^13.13.1",
         "stylelint-config-standard": "^22.0.0",

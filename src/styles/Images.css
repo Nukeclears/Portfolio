@@ -1,9 +1,0 @@
-@layer components {
-    .info_image {
-        background: url('/src/images/Block_image.png');
-    }
-
-    .detail_image_bg {
-        background: url('/src/images/Block_image.png');
-    }
-}

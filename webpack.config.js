@@ -1,23 +1,32 @@
 const path = require('path')
-var StyleLintPlugin = require('stylelint-webpack-plugin')
+var StylelintPlugin = require('stylelint-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 var ImageminPlugin = require('imagemin-webpack-plugin').default
 const { VueLoaderPlugin } = require("vue-loader");
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
+const mode = process.env.NODE_ENV || 'development';
+const prod = mode === 'production';
+
 module.exports = {
     mode: 'production',
     entry: {
         index: './src/main.js',
+        styles: './src/styles.js',
     },
     cache: {
-        type: 'filesystem',
-        cacheDirectory: path.resolve(__dirname, '.temp_cache'),
+        type: 'memory',
       },
     output: {
         path: path.resolve(__dirname, 'docs'),
         filename: '[name].bundle.js',
         clean: true,
+    },
+    resolve: {
+        alias: {
+          vue$: "vue/dist/vue.js",
+        },
+        extensions: ["*", ".js", ".vue", ".json"],
     },
     module: {
         rules: [
@@ -45,12 +54,12 @@ module.exports = {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
                 include: path.resolve(__dirname, 'src/images'),
-                use: {
-                    loader: require.resolve('webpack-image-resize-loader'),
-                    options: {
-                        width: 1200,
-                    },
-                },
+                // use: {
+                //     loader: require.resolve('webpack-image-resize-loader'),
+                //     options: {
+                //         width: 1200,
+                //     },
+                // },
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
@@ -64,46 +73,26 @@ module.exports = {
         watchContentBase: true,
     },
     plugins: [
-        new StyleLintPlugin({
-            configFile: '.stylelintrc',
-            context: 'src',
-            files: '**/*.css',
-            failOnError: false,
-            quiet: false,
-            emitErrors: true, //lint error checking
+        new StylelintPlugin({
+            context: path.resolve(__dirname, 'src'),
+            extensions: ['css', 'scss', 'sass']
+            //fix: true,
         }),
         new HtmlWebpackPlugin({
             title: 'Portfolio',
             template: path.resolve(__dirname, "src", "index.html"),
         }),
-        new ImageminPlugin({
-            disable: process.env.NODE_ENV !== 'production', // Disable during development
-            pngquant: {
-                quality: '90',
-            },
-        }),
+        // new ImageminPlugin({
+        //     disable: prod ? true : false,
+        //     pngquant: {
+        //         quality: '90',
+        //     },
+        // }),
         new VueLoaderPlugin(),
         new BrowserSyncPlugin({
-            // browse to http://localhost:3000/ during development,
-            // ./public directory is being served
             host: 'localhost',
             port: 3000,
             proxy: "localhost:8080",
-            //server: { baseDir: ['src'] }
           })
-        // new CopyPlugin({
-        //     patterns: [
-        //         { from: "src/images", to: "images" },
-        //     ],
-        //     options: {
-        //         concurrency: 100,
-        //     },
-        // }),
     ],
-    resolve: {
-        alias: {
-          vue$: "vue/dist/vue.runtime.esm.js",
-        },
-        extensions: ["*", ".js", ".vue", ".json"],
-    },
 }

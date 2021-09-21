@@ -1,12 +1,13 @@
 <template>
-  <div class="min-h-[100vh] rounded-lg shadow bg-base-200 drawer">
-    <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+  <div class="min-h-[100vh] rounded-lg shadow bg-base-200 drawer h-52">
+    <input id="menu-drawer" type="checkbox" class="drawer-toggle" />
     <DrawerMenu />
     <div class="flex flex-col drawer-content h-full bg-base-100">
-      <MenuContent />
+      <MenuContent :cart="total"/>
       <div class="flex-1">
-        <router-view></router-view>
+        <router-view @update-cart="updateCart()"></router-view>
       </div>
+      <button></button>
       <Footer />
     </div>
   </div>
@@ -23,6 +24,16 @@ export default {
     MenuContent,
     Footer,
   },
+  data() {
+    return {
+      total: 0,
+    };
+  },
+  methods: {
+      updateCart() {
+        this.total += 1
+      },
+    },
   computed: {
     routes() {
       return this.$router.options.routes;

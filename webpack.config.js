@@ -9,7 +9,7 @@ const mode = process.env.NODE_ENV || 'development';
 const prod = mode === 'production';
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     entry: {
         index: './src/main.js',
         styles: './src/styles.js',

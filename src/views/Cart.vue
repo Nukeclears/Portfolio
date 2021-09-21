@@ -4,7 +4,7 @@
       <div class="text-center hero-content">
         <div class="max-w-md">
           <h1 class="mb-5 text-5xl font-bold">cart</h1>
-          <p class="mb-5">CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAART</p>
+          <p class="mb-5">Fantastic Cart</p>
         </div>
       </div>
     </div>
@@ -60,7 +60,7 @@
           </tfoot>
         </table>
       </div>
-      <div v-else class="alert alert-error my-16 text-2xl">no items!</div>
+      <div v-else class="alert alert-error my-16 text-xl">no items!</div>
       <button v-if="cart.length !== 0" @click="clearCart();" class="btn btn-warning w-full">clear</button>
     </div>
   </div>

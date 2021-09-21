@@ -8,7 +8,9 @@
         <li v-for="route in routes" :key="route.path">
           <router-link :to="route.path">{{ route.name }}</router-link>
         </li>
-        <li v-for="route in routeCart" :key="route.path">
+      </ul>
+    </div>
+     <div v-for="route in routeCart" :key="route.path">
           <router-link :to="route.path">
             <div class="mx-5">
               <a href="#" class="indicator">
@@ -30,10 +32,7 @@
               </a>
             </div>
           </router-link>
-        </li>
-      </ul>
-    </div>
-
+        </div>
     <div class="flex-none lg:hidden">
       <label for="menu-drawer" class="btn btn-square btn-ghost">
         <svg

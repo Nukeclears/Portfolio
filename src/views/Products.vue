@@ -49,13 +49,6 @@ export default {
               variantSale: false,
               variantQuantity: 0,
             },
-            {
-              variantId: 2236,
-              variantColor: "red",
-              variantImage: require("../images/socks-blue.png"),
-              variantSale: false,
-              variantQuantity: 4,
-            },
           ],
         },
         producttwo: {
@@ -76,13 +69,6 @@ export default {
               variantImage: require("../images/socks-green.png"),
               variantSale: false,
               variantQuantity: 0,
-            },
-            {
-              variantId: 2236,
-              variantColor: "red",
-              variantImage: require("../images/socks-blue.png"),
-              variantSale: false,
-              variantQuantity: 4,
             },
           ],
         },

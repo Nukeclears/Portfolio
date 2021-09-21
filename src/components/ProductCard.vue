@@ -25,11 +25,11 @@
           </div>
           <div class="flex gap-x-4 mb-5">
             <div v-for="(variant, index) in variants" :key="variant.variantId">
-              <div
+              <button
                 class="h-6 w-6 rounded-full border border-white"
                 :style="{ backgroundColor: variant.variantColor }"
-                @mouseover="updateProduct(index)"
-              ></div>
+                @click="updateProduct(index)"
+              ></button>
             </div>
           </div>
         </div>

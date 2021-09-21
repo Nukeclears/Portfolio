@@ -14,7 +14,7 @@ export default {
   name: "Navigation",
   computed: {
     routes() {
-      return this.$router.options.routes;
+      return this.$router.options.routes.filter((item) => item.name != "cart");
     },
   },
 };

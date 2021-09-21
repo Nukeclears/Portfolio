@@ -1,11 +1,81 @@
 <template>
-  <div class="hero h-96 bg-base-200">
-    <div class="text-center hero-content">
-      <div class="max-w-md">
-        <h1 class="mb-5 text-5xl font-bold">cart</h1>
-        <p class="mb-5">idk kinda works?</p>
-        <button class="btn btn-primary">Button does fuck all</button>
+  <div>
+    <div class="hero h-64 bg-base-200">
+      <div class="text-center hero-content">
+        <div class="max-w-md">
+          <h1 class="mb-5 text-5xl font-bold">cart</h1>
+          <p class="mb-5">CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAART</p>
+        </div>
       </div>
+    </div>
+    <div class="container">
+      <div v-if="cart.length !== 0" class="overflow-x-auto py-10">
+        <table class="table w-full">
+          <thead>
+            <tr>
+              <th>
+              </th>
+              <th>Name</th>
+              <th>Color</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr v-for="item in cart" :key="item.product">
+              <th>
+                <label>
+                  <input type="checkbox" class="checkbox" />
+                </label>
+              </th>
+              <td>
+                <div class="flex items-center space-x-3">
+                  <div class="avatar">
+                    <div class="w-12 h-12 mask mask-squircle">
+                      <img
+                        v-bind:src="item.variant.variantImage"
+                        alt="Avatar Tailwind CSS Component"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div class="font-bold">{{ item.name }}</div>
+                    <div class="text-sm opacity-50">{{ item.brand }}</div>
+                  </div>
+                </div>
+              </td>
+              <td>{{ item.variant.variantColor }}</td>
+              <th>
+                <button class="btn btn-ghost btn-xs">details</button>
+              </th>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Color</th>
+              <th></th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div v-else class="alert alert-error my-16 text-2xl">no items!</div>
+      <button v-if="cart.length !== 0" @click="clearCart();" class="btn btn-warning w-full">clear</button>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "cart",
+  props: {
+    cart: Array,
+  },
+  methods: {
+    clearCart() {
+      this.$emit("clear-cart")
+    }
+  }
+};
+</script>

@@ -8,7 +8,7 @@
         :product="productsingle.product"
         :selectedVariant="productsingle.selectedVariant"
         :variants="productsingle.variants"
-        @button-clicked="addToCart()"
+        @button-clicked="addToCart" 
       />
     </div>
   </div>
@@ -23,9 +23,9 @@ export default {
     ProductCard,
   },
   methods: {
-    addToCart() {
-      this.$emit("update-cart");
-    },
+    addToCart(e) {
+      this.$emit("update-cart", e)
+    }
   },
   data() {
     return {
@@ -83,6 +83,27 @@ export default {
               variantImage: require("../images/socks-blue.png"),
               variantSale: false,
               variantQuantity: 4,
+            },
+          ],
+        },
+        productThree: {
+          brand: "Thomas",
+          product: "Hat",
+          selectedVariant: 0,
+          variants: [
+            {
+              variantId: 2145,
+              variantColor: "Blue",
+              variantImage: require("../images/hat-blue.jpg"),
+              variantSale: false,
+              variantQuantity: 0,
+            },
+            {
+              variantId: 6421,
+              variantColor: "Pink",
+              variantImage: require("../images/hat-pink.png"),
+              variantSale: true,
+              variantQuantity: 99,
             },
           ],
         },

@@ -5,9 +5,8 @@
     <div class="flex flex-col drawer-content h-full bg-base-100">
       <MenuContent :cart="total"/>
       <div class="flex-1">
-        <router-view @update-cart="updateCart()"></router-view>
+        <router-view @update-cart="updateCart" @clear-cart="clearCart" :cart="cart"></router-view>
       </div>
-      <button></button>
       <Footer />
     </div>
   </div>
@@ -26,13 +25,19 @@ export default {
   },
   data() {
     return {
+      cart: [],
       total: 0,
     };
   },
   methods: {
-      updateCart() {
+      updateCart(e) {
+        this.cart.push(e);
         this.total += 1
       },
+      clearCart() {
+        this.total = 0,
+        this.cart = []
+      }
     },
   computed: {
     routes() {

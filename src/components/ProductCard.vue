@@ -37,7 +37,7 @@
         <div class="card-actions">
           <a>
             <button
-              @click="buttonClicked"
+              @click="buttonClicked();"
               :disabled="inStock <= 0"
               class="btn btn-primary"
             >
@@ -64,11 +64,11 @@ export default {
     return {};
   },
   methods: {
-    buttonClicked() {
-      this.$emit("button-clicked");
-    },
     updateProduct(index) {
       this.selectedVariant = index;
+    },
+    buttonClicked() {
+      this.$emit("button-clicked", {brand:this.brand, name:this.product, variant:this.variants[this.selectedVariant]});
     },
   },
   computed: {

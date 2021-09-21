@@ -9,7 +9,7 @@ const mode = process.env.NODE_ENV || 'development';
 const prod = mode === 'production';
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: {
         index: './src/main.js',
         styles: './src/styles.js',
@@ -24,7 +24,7 @@ module.exports = {
     },
     resolve: {
         alias: {
-          vue$: "vue/dist/vue.js",
+          vue$: !prod ? "vue/dist/vue.js" : "vue/dist/vue.min.js",
         },
         extensions: ["*", ".js", ".vue", ".json"],
     },

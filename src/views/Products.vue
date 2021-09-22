@@ -1,15 +1,33 @@
 <template>
   <div class="container px-5 md:px-0">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-9 py-10">
-      <ProductCard
-        v-for="productsingle in Productitems"
-        :key="productsingle.product"
-        :brand="productsingle.brand"
-        :product="productsingle.product"
-        :selectedVariant="productsingle.selectedVariant"
-        :variants="productsingle.variants"
-        @button-clicked="addToCart" 
-      />
+    <div class="grid grid-cols-12 gap-10 py-10">
+      <div class="col-span-12 lg:col-span-2">
+        <div class="flex flex-col">
+          <h2 class="text-2xl mb-5">Filters</h2>
+          <div v-for="(item) in Filtering.checkboxProductType" :key="item.value" class="form-control">
+            <label class="cursor-pointer label">
+              <span class="label-text text-lg">{{ item.text }}</span>
+              <input v-model="item.selected" :value="item.value" type="checkbox" class="checkbox" />
+            </label>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-9 col-span-12 lg:col-span-10"
+      >
+        <ProductCard
+          v-for="(productsingle, index) in filterItems"
+          :key="index"
+          :brand="productsingle.brand"
+          :product="productsingle.product"
+          :category="productsingle.category"
+          :productType="productsingle.productType"
+          :selectedVariant="productsingle.selectedVariant"
+          :variants="productsingle.variants"
+          @button-clicked="addToCart"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -24,15 +42,34 @@ export default {
   },
   methods: {
     addToCart(e) {
-      this.$emit("update-cart", e)
+      this.$emit("update-cart", e);
+    },
+  },
+  computed: {
+    filterItems() {
+      var productTypeItems = this.Productitems;
+      this.Filtering.checkboxProductType.forEach(option => {
+        if (option.selected) {
+          productTypeItems = Object.values(productTypeItems).filter(item => item.productType.includes(option.value))
+        }
+      })
+      return productTypeItems;      
     }
   },
   data() {
     return {
+      Filtering: {
+        checkboxProductType: [
+          { text: 'test filter', value: 'test', selected: false },
+          { text: 'socks', value: 'socks', selected: false },
+          { text: 'hat', value: 'hat', selected: false }
+        ]
+      },
       Productitems: {
         productone: {
           brand: "Vue",
           product: "Socks",
+          productType: ["test", "socks"],
           selectedVariant: 0,
           variants: [
             {
@@ -47,13 +84,14 @@ export default {
               variantColor: "blue",
               variantImage: require("../images/socks-blue.png"),
               variantSale: false,
-              variantQuantity: 0,
+              variantQuantity: 1,
             },
           ],
         },
         producttwo: {
           brand: "Vue",
           product: "Smocks",
+          productType: ["socks"],
           selectedVariant: 0,
           variants: [
             {
@@ -75,6 +113,7 @@ export default {
         productThree: {
           brand: "Thomas",
           product: "Hat",
+          productType: ["test", "hat"],
           selectedVariant: 0,
           variants: [
             {

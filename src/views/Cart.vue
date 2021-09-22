@@ -8,8 +8,8 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div v-if="cart.length !== 0" class="overflow-x-auto py-10">
+    <div class="container py-10 flex flex-col gap-y-10">
+      <div v-if="cart.length !== 0" class="overflow-x-auto">
         <table class="table w-full">
           <thead>
             <tr>

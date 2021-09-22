@@ -1,12 +1,36 @@
 <template>
   <div class="card lg:card-side bordered">
     <figure class="overflow-hidden">
-      <img v-bind:src="Image" class="w-48 max-h-96 object-cover" />
+      <div class="h-full bg-white">
+        <img v-bind:src="Image" height="300" width="300" class="w-full lg:w-80 h-96 lg:h-full object-contain" />
+      </div>
     </figure>
     <div class="card-body">
-      <h2 class="card-title text-4xl mb-5">{{ title }}</h2>
+      <div class="card-title mb-5">
+        <h2 class="text-4xl">{{ product }}</h2>
+        <h3 class="text-md text-accent">{{ brand }}</h3>
+      </div>
+
+      <div class="flex gap-x-4 mb-7">
+        <div v-for="item in productType" :key="item" class="badge badge-outline">
+          {{ item }}
+        </div>
+      </div>
       <div class="flex flex-col h-full">
         <div class="flex flex-col gap-y-6 flex-1">
+          <div class="flex gap-x-4 mb-5">
+            <div v-for="(variant, index) in variants" :key="variant.variantId">
+              <button
+                class="h-6 w-6 rounded-full border-2 border-accent"
+                :style="{backgroundColor: variant.variantColor}"
+                @click="updateProduct(index)"
+              >
+              </button>
+            </div>
+          </div>
+        </div>
+        <p v-if="onSale" class="alert alert-success">On sale!</p>
+        <div class="card-actions flex-col">
           <div>
             <p v-if="inStock > 10" class="badge badge-success">In stock</p>
             <p
@@ -23,27 +47,16 @@
               Out of stock
             </p>
           </div>
-          <div class="flex gap-x-4 mb-5">
-            <div v-for="(variant, index) in variants" :key="variant.variantId">
-              <button
-                class="h-6 w-6 rounded-full border border-white"
-                :style="{ backgroundColor: variant.variantColor }"
-                @click="updateProduct(index)"
-              ></button>
-            </div>
-          </div>
-        </div>
-        <p v-if="onSale" class="alert alert-success">On sale!</p>
-        <div class="card-actions">
           <a>
             <button
-              @click="buttonClicked();"
+              @click="buttonClicked()"
               :disabled="inStock <= 0"
               class="btn btn-primary"
             >
               Add to Cart
             </button>
           </a>
+          
         </div>
       </div>
     </div>
@@ -56,6 +69,7 @@ export default {
   props: {
     brand: String,
     product: String,
+    productType: Array,
     selectedVariant: Number,
     variants: Array,
     index: 0,
@@ -68,13 +82,15 @@ export default {
       this.selectedVariant = index;
     },
     buttonClicked() {
-      this.$emit("button-clicked", {brand:this.brand, name:this.product, variant:this.variants[this.selectedVariant]});
+      this.$emit("button-clicked", {
+        brand: this.brand,
+        name: this.product,
+        variant: this.variants[this.selectedVariant],
+        category: this.category,
+      });
     },
   },
   computed: {
-    title() {
-      return this.brand + " - " + this.product;
-    },
     Image() {
       return this.variants[this.selectedVariant].variantImage;
     },

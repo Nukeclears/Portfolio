@@ -8,20 +8,24 @@
         </div>
       </div>
     </div>
+    <ul class="w-full steps pt-10">
+      <li class="step step-primary">Cart</li>
+      <li class="step">Shipping</li>
+      <li class="step">Payment</li>
+      <li class="step">Finished</li>
+    </ul>
     <div class="container py-10 flex flex-col gap-y-10">
       <div v-if="cart.length !== 0" class="overflow-x-auto">
         <table class="table w-full">
           <thead>
             <tr>
-              <th>
-              </th>
+              <th></th>
               <th>Name</th>
               <th>Color</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
-            
             <tr v-for="item in cart" :key="item.product">
               <th>
                 <label>
@@ -61,7 +65,22 @@
         </table>
       </div>
       <div v-else class="alert alert-error my-16 text-xl">no items!</div>
-      <button v-if="cart.length !== 0" @click="clearCart();" class="btn btn-warning w-full">clear</button>
+      <div class="flex justify-between">
+        <button
+          v-if="cart.length !== 0"
+          @click="clearCart()"
+          class="btn btn-error"
+        >
+          clear
+        </button>
+        <button
+          v-if="cart.length !== 0"
+          class="btn btn-success"
+        >
+          Continue
+        </button>
+        
+      </div>
     </div>
   </div>
 </template>
@@ -74,8 +93,8 @@ export default {
   },
   methods: {
     clearCart() {
-      this.$emit("clear-cart")
-    }
-  }
+      this.$emit("clear-cart");
+    },
+  },
 };
 </script>

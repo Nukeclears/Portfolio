@@ -3,7 +3,7 @@
     <input id="menu-drawer" type="checkbox" class="drawer-toggle" />
     <DrawerMenu />
     <div class="flex flex-col drawer-content h-full bg-base-100">
-      <MenuContent :cart="total"/>
+      <MenuContent :cart="cartAmount"/>
       <div class="flex-1">
         <router-view @update-cart="updateCart" @clear-cart="clearCart" :cart="cart"></router-view>
       </div>
@@ -26,13 +26,11 @@ export default {
   data() {
     return {
       cart: [],
-      total: 0,
     };
   },
   methods: {
       updateCart(e) {
         this.cart.push(e);
-        this.total += 1
       },
       clearCart() {
         this.total = 0,
@@ -43,6 +41,9 @@ export default {
     routes() {
       return this.$router.options.routes;
     },
+    cartAmount() {
+      return this.cart.length;
+    }
   },
 };
 </script>

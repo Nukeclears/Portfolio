@@ -1,5 +1,4 @@
 node_modules
-.temp_cache
 .yarn/*
 !.yarn/patches
 !.yarn/releases

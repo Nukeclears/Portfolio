@@ -30,6 +30,7 @@
           </div>
         </div>
         <p v-if="onSale" class="alert alert-success">On sale!</p>
+        <div v-else class="h-[56px]"></div>
         <div class="card-actions flex-col">
           <div>
             <p v-if="inStock > 10" class="badge badge-success">In stock</p>
@@ -70,12 +71,13 @@ export default {
     brand: String,
     product: String,
     productType: Array,
-    selectedVariant: Number,
     variants: Array,
     index: 0,
   },
   data() {
-    return {};
+    return {
+      selectedVariant: 0,
+    };
   },
   methods: {
     updateProduct(index) {

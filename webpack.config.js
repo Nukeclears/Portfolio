@@ -19,7 +19,7 @@ module.exports = {
       },
     output: {
         path: path.resolve(__dirname, 'docs'),
-        filename: '[name].bundle.js',
+        filename: '[name].[contenthash].bundle.js',
         clean: true,
     },
     resolve: {
